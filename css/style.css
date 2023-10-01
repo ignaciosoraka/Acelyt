@@ -13,7 +13,7 @@
 body {
     background:
         url(../img/Captura\ de\ pantalla\ 2023-10-01\ 021116.png);
-       
+
 }
 
 body::before {
@@ -25,9 +25,10 @@ body::before {
     left: 0;
     right: 0;
     bottom: 0;
-    filter: blur(1px); /* Ajusta el valor para controlar la cantidad de desenfoque */
+    filter: blur(1px);
+    /* Ajusta el valor para controlar la cantidad de desenfoque */
     z-index: -1;
-  }
+}
 
 header {
     background:
@@ -63,8 +64,8 @@ header {
     font-size: 30px;
     line-height: 60px;
     z-index: 999;
-  }
-  
+}
+
 
 .menu {
     position: absolute;
@@ -93,7 +94,8 @@ header {
 }
 
 .image-container:hover {
-    transform: scale(1.1); /* Cambia la escala al 110% en hover */
+    transform: scale(1.1);
+    /* Cambia la escala al 110% en hover */
 }
 
 .menu .logo {
@@ -147,7 +149,7 @@ header {
 }
 
 .content p {
-    
+
     color: antiquewhite;
 
     font-size: 20px;
@@ -173,7 +175,27 @@ header {
 /*----------------------------------------
 SERVICIOS
 ----------------------------------------*/
+.service {
+    transition: transform 0.3s ease;
+}
 
+/* Definir la transformación inicial para que el elemento no se mueva */
+.service:hover {
+    transform: none;
+}
+
+/* Estilo de "flip-left" al pasar el mouse sobre el elemento */
+.service[data-aos="flip-left"]:hover {
+    transform: scale(0.95) rotateY(-10deg);
+}
+
+
+
+
+/* Estilo de "flip-right" al pasar el mouse sobre el elemento */
+.service[data-aos="flip-right"]:hover {
+    transform: scale(0.95) rotateY(10deg);
+}
 
 
 .services {
@@ -246,10 +268,11 @@ PRODUCTOS
     font-size: 55px;
 }
 
-.porfolio{
+.porfolio {
     display: flex;
     align-items: center;
 }
+
 .porfolio img {
     width: 350px;
 }
@@ -277,10 +300,10 @@ PRODUCTOS
 
     text-align: left;
     margin-right: 100px;
-    
+
 }
 
-.porfolio-2 h3{
+.porfolio-2 h3 {
     font-size: 35px;
     margin-bottom: 15px;
 
@@ -295,20 +318,155 @@ PRODUCTOS
 
 
 
-.btn-2{
+.btn-2 {
     display: inline-block;
     padding: 15px 25px;
     border-radius: 25px;
-    background-color:#5E5F5E;
+    background-color: #5E5F5E;
     color: #ffffff;
 }
 
-.btn-2:hover{
+.btn-2:hover {
     background-color: #1c1c1c;
 }
 
 
-footer{
+
+
+/*----------------------------------------
+Contacto
+----------------------------------------*/
+
+.contact {
+    display: flex;
+    margin-bottom: 30px;
+
+    justify-content: center;
+}
+
+.form-container {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+
+    background: #5e5e5e;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    border-radius: 15px;
+    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.3);
+
+}
+
+.form-container h2 {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    font-size: 40px;
+    color: #000000;
+    margin-bottom: 10px;
+}
+
+.form-container p {
+    font-size: 18px;
+    color: #949fbd;
+    margin-bottom: 50px;
+}
+
+form {
+    padding: 35px;
+
+    border-radius: 15px;
+
+
+
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+
+}
+
+
+.form-group {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 40px;
+    margin-bottom: 40px;
+}
+
+
+.form-content {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    color: #f5fcff;
+    font-size: 15px;
+    margin-bottom: 15px;
+}
+
+input,
+textarea {
+    padding: 10px 5px;
+    background-color: #ffffff;
+    border: 0;
+    outline: none;
+    border-radius: 25px;
+    color: #000000;
+    font-size: 16px;
+}
+
+
+::placeholder {
+    color: #949fbd;
+    font-size: 16px;
+}
+
+textarea {
+    margin-bottom: 40px;
+}
+
+
+.btn2 {
+    margin-top: 30px;
+    padding: 10px 4px;
+    width: 200px;
+    align-self: center;
+    text-transform: capitalize;
+    color: #f5fcff;
+    font-size: 16px;
+    background-color: #D32728;
+    border: 1px solid #5E5F5E;
+
+    cursor: pointer;
+
+}
+
+.btn2:hover {
+    background: #000000;
+}
+
+
+.success {
+    position: absolute;
+    top: 50px;
+    color: #25D366;
+    font-size: 18px;
+}
+
+.error {
+    position: absolute;
+    top: 50px;
+    color: red;
+    font-size: 18px;
+}
+
+/*termina contacto*/
+
+
+footer {
     padding: 200px 0px 30px 0px;
     background:
         url(../img/acelytt.png);
@@ -317,32 +475,33 @@ footer{
     background-size: cover;
 }
 
-.info-content{
+.info-content {
     display: flex;
 }
 
 
-.info-price{
+.info-price {
     padding: 35px;
+    border-radius: 15px;
     text-align: center;
     background-color: #f5f5f5;
     box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.3);
-    margin: 0px 150px 0px 0px ;
+    margin: 0px 150px 0px 0px;
     color: #0e0e0e;
 }
 
-.info-txt{
+.info-txt {
     margin-left: 35px;
     color: #ffffff;
 
 }
 
-hr{
+hr {
     margin: 45px 0px;
     border: 0.2px solid #f5f5f5;
 }
 
-.enlaces{
+.enlaces {
     display: flex;
     justify-content: space-between;
     color: #ffffff;
@@ -350,165 +509,37 @@ hr{
 }
 
 
-.enlace h3{
+.enlace h3 {
     font-size: 25px;
 }
 
-.enlace{
+.enlace {
     display: flex;
-   
+
 }
 
-.enlace li a{
+.enlace li a {
     display: block;
     margin: 20px;
     color: #ffffff;
 }
 
-.enlace li a:hover{
+.enlace li a:hover {
     color: #5E5F5E;
 }
 
-/*----------------------------------------
-Contacto
-----------------------------------------*/
 
-.contact {
-    display: flex;
-  
-    justify-content: center;
-  }
-  
-  .form-container {
-    text-align: center;
-    display: flex;
-    justify-content: center;
-   
-    background:#5e5e5e;
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    
-    border-radius: 15px;
-    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.3);
-  
-  }
-  
-  .form-container h2 {
-    display: flex;
-    text-align: center;
-    font-size: 40px;
-    color: #000000;
-    margin-bottom: 10px;
-  }
-  
-  .form-container p {
-    font-size: 18px;
-    color: #949fbd;
-    margin-bottom: 50px;
-  }
-  
-  form {
-    padding: 20px;
-  
-    border-radius: 15px;
-  
-    
-   
-    text-align: left;
-    display: flex;
-    flex-direction: column;
-  
-  }
-  
-  
-  .form-group {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 40px;
-    margin-bottom: 40px;
-  }
-  
-  
-  .form-content {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  label {
-    color: #f5fcff;
-    font-size: 15px;
-    margin-bottom: 15px;
-  }
-  
-  input,
-  textarea {
-    padding: 10px 5px;
-    background-color: #ffffff;
-    border: 0;
-    outline: none;
-    border-radius: 25px;
-    color: #000000;
-    font-size: 16px;
-  }
-  
-  
-  ::placeholder {
-    color: #949fbd;
-    font-size: 16px;
-  }
-  
-  textarea {
-    margin-bottom: 40px;
-  }
-  
-  
-  .btn2 {
-  margin-top: 30px;
-    padding: 10px 4px;
-    width: 200px;
-    align-self: center;
-    text-transform: capitalize;
-    color: #f5fcff;
-    font-size: 16px;
-    background-color:#D32728;
-    border: 1px solid #5E5F5E;
-    
-    cursor: pointer;
-    
-  }
-  
-  .btn2:hover {
-    background:  #545859;
-  }
-  
-  
-  .success {
-    position: absolute;
-    top: 50px;
-    color: #25D366;
-    font-size: 18px;
-  }
-  
-  .error {
-    position: absolute;
-    top: 50px;
-    color: red;
-    font-size: 18px;
-  }
-  
-  /*termina contacto*/
 
 @media (max-width: 991px) {
-    .menu{
+    .menu {
         padding: 20px;
     }
 
-    .menu label{
+    .menu label {
         display: initial;
     }
 
-    .menu .navbar{
+    .menu .navbar {
         position: absolute;
         top: 100%;
         left: 0;
@@ -520,22 +551,22 @@ Contacto
 
     }
 
-    .menu .navbar ul li{
+    .menu .navbar ul li {
         width: 100%;
     }
 
-    #menu:checked ~ .navbar{
+    #menu:checked~.navbar {
         display: initial;
     }
 
 
-    header{
+    header {
         height: 0vh;
         padding: 400px 0px;
         background-position: center center;
     }
 
-    .header-conent{
+    .header-conent {
         flex-direction: column;
         text-align: center;
         align-items: center;
@@ -543,79 +574,78 @@ Contacto
 
     }
 
-    .content{
+    .content {
         padding: 0;
     }
 
-    .content h1{
+    .content h1 {
         margin-top: 100px;
         font-size: 45px;
     }
-    .content p{
+
+    .content p {
         margin-top: 0px;
     }
 
-    .services{
+    .services {
         flex-direction: column;
         padding: 30px 30px 0px 30px;
     }
 
-    .service{
+    .service {
         margin-bottom: 50px;
     }
 
-    .porfolios{
+    .porfolios {
         padding: 0px 30px 30px 30px;
     }
-    .porfolios h2{
+
+    .porfolios h2 {
         margin-bottom: 15px;
 
     }
 
-    .porfolio{
+    .porfolio {
         flex-direction: column;
     }
 
-    .porfolio img{
-        
+    .porfolio img {}
 
+    .porfolio-1 {
+        text-align: center;
+        margin: 0px 0px 25px 0px;
     }
 
-    .porfolio-1{
+    .porfolio-2 {
         text-align: center;
-        margin: 0px 0px 25px 0px ;
-    }
-
-    .porfolio-2{
-        text-align: center;
-        margin: 0px 0px 25px 0px ;
+        margin: 0px 0px 25px 0px;
         order: 1;
-        
-    }
-    
 
-    footer{
+    }
+
+
+    footer {
         padding: 0px 30px 30px 30px;
     }
 
-    .info-content{
+    .info-content {
         flex-direction: column;
         text-align: center;
     }
 
-    .info-price{
+    .info-price {
         margin: 0px 0px 20px 0px;
     }
 
-    .info-txt{
+    .info-txt {
         margin: 0px;
     }
 
-    hr{
+    hr {
         margin: 25px 0px;
     }
 
-    
+
 
 
 
@@ -623,36 +653,38 @@ Contacto
 
 @media (max-width: 991px) {
 
-/*contacto*/
-.form {
-    width: 100%;
-    display: flex;
-    
-    
-  }
-  .custom-block {
-    border-radius: var(--border-radius-medium);
-    position: relative;
-    overflow: visible;
-    
-    
-  }
-  .custom-block-image2{
-    height: 150%;
-    border-radius: 15px;
-  }
+    /*contacto*/
+    .form {
+        width: 100%;
+        display: flex;
 
 
-  
-  .form-group {
-    grid-template-columns: repeat(1, 1fr);
-    grid-gap: 10px;
-    margin-bottom: 10px;
-    width: 50px;
-    
-  }
+    }
 
-  textarea {
-    margin-bottom: 30px;
-  }
+    .custom-block {
+        border-radius: var(--border-radius-medium);
+        position: relative;
+        overflow: visible;
+
+
+    }
+
+    .custom-block-image2 {
+        height: 150%;
+        border-radius: 15px;
+    }
+
+
+
+    .form-group {
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 10px;
+        margin-bottom: 10px;
+        width: 50px;
+
+    }
+
+    textarea {
+        margin-bottom: 30px;
+    }
 }
