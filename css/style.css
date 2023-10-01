@@ -381,7 +381,7 @@ form {
 
 
 
-    text-align: left;
+   
     display: flex;
     flex-direction: column;
 
@@ -399,6 +399,8 @@ form {
 .form-content {
     display: flex;
     flex-direction: column;
+    text-align: center;
+    justify-content: center;
 }
 
 label {
@@ -531,6 +533,7 @@ hr {
 
 
 @media (max-width: 991px) {
+    
     .menu {
         padding: 20px;
     }
@@ -657,6 +660,10 @@ hr {
     .form {
         width: 100%;
         display: flex;
+        display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
 
 
     }
@@ -681,6 +688,7 @@ hr {
         grid-gap: 10px;
         margin-bottom: 10px;
         width: 50px;
+        
 
     }
 

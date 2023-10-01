@@ -18,7 +18,7 @@
     <header>
 
         <div class="menu container">
-            <img class="logo" src="./img/acelyt3.png" alt="Logo">
+            <img  style="margin-top: -30px;"  class="logo" src="./img/acelyt3.png" alt="Logo">
             <input type="checkbox" id="menu">
             <label for="menu">
                 <img src="img/menu.png" class="menu-icono" alt="">
@@ -28,9 +28,9 @@
             <nav class="navbar">
 
                 <ul>
-                    <li><a href="#">Inicio</a></li>
-                    <li><a href="#productos">Productos</a></li>
-                    <li><a href="#">Contacto</a></li>
+                    <li><a href="#" onclick="closeMenu()">Inicio</a></li>
+                    <li><a href="#productos" onclick="closeMenu()">Productos</a></li>
+                    <li><a href="#contacto" onclick="closeMenu()">Contacto</a></li>
                 </ul>
             </nav>
         </div>
@@ -145,7 +145,8 @@
         </div>
 
     </section>
-    <section class="contact">
+
+    <section id="contacto" class="contact">
 
 
         <div data-aos="flip-left"
@@ -153,7 +154,7 @@
         data-aos-duration="2000" class="form-container">
 
             <form action="correos.php" method="POST">
-                <h5  style="color:#ffffff; ">Agendar una cita</h5>
+                <h5  style="color:#ffffff; margin-bottom: 25px;">Agendar una cita</h5>
 
                 <div class=" col-md-12 col-sm-12 form-group">
 
@@ -221,11 +222,11 @@
                 <div class="enlaces">
                     <a class="navbar-brand mb-2" href="index.html">
                         <img src="./img/acelyt3.png" alt="Logo de ZANE"
-                            style=" margin-top: -40px; width: 200px; height: 78px;">
+                            style=" margin-top: -20px; width: 200px; height: 78px;">
                     </a>
-                    <div class="enlace">
+                    <div  style="margin-right: 100px;" class="enlace">
                         <li> <a href="https://www.facebook.com/suprads" class="social-icon-link bi-facebook"></a></li>
-                        <li><a href="https://twitter.com/TuNombreDeUsuario" class="social-icon-link bi-twitter"></a>
+                        
                         </li>
                     </div>
 
@@ -243,6 +244,14 @@
         AOS.init();
     </script>
     <script src="./js/main.js"></script>
+    <script>
+        const menuCheckbox = document.getElementById('menu');
+        const closeButton = document.querySelector('.close-button');
+    
+        closeButton.addEventListener('click', () => {
+            menuCheckbox.checked = false;
+        });
+    </script>
     
 </body>
 
