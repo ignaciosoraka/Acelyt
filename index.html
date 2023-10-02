@@ -5,11 +5,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Acelyt</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
     <link rel="stylesheet" href="./css/style.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <link rel="icon" href="img/acelyt3.png"image/x-icon">
 
 </head>
 
@@ -28,29 +29,28 @@
             <nav class="navbar">
 
                 <ul>
-                    <li><a href="#" onclick="closeMenu()">Inicio</a></li>
+                    <li><a href="index.html" onclick="closeMenu()">Inicio</a></li>
                     <li><a href="#productos" onclick="closeMenu()">Productos</a></li>
                     <li><a href="#contacto" onclick="closeMenu()">Contacto</a></li>
+                    <li><a href="mecanizados.html" onclick="closeMenu()">Mecanizados</a></li>
                 </ul>
             </nav>
         </div>
 
         <div class="header-conent container">
 
-            <div data-aos="fade-right"
-            data-aos-offset="300"
-            data-aos-easing="ease-in-sine" class="content">
-                <h1> Resina acetal POM </h1>
-                <p>Fabricación de Barras, Planchas, Tubos</p>
-                <div class="image-container"> <a href="https://acelyt.com.ar/wp-content/uploads/2023/08/acelyt.pdf">
-                        <img width="400" height="140"
+            <div  class="content">
+                <h1 style="text-shadow:0px 0px 20px rgba(32, 32, 33, 0.9);" class="aos-init" data-aos="zoom-out-down" data-aos-delay="0">Resina acetal POM</h1>
+                <p class="aos-init" data-aos="zoom-out-down" data-aos-delay="300">Fabricación de Barras, Planchas, Tubos</p>
+                <div class="image-container"> <a href="https://acelyt.com.ar/wp-content/uploads/2023/08/acelyt.pdf" target="_blank">
+                        <img width="400" height="140" class="aos-init" data-aos="zoom-out-down" data-aos-delay="600"
                             src="https://acelyt.com.ar/wp-content/uploads/2023/08/acelyt-proppdf.png"
                             class="vc_single_image-img attachment-full" alt="" decoding="async" title="acelyt proppdf"
                             srcset="https://acelyt.com.ar/wp-content/uploads/2023/08/acelyt-proppdf.png 400w, https://acelyt.com.ar/wp-content/uploads/2023/08/acelyt-proppdf-300x105.png 300w"
                             sizes="(max-width: 400px) 100vw, 400px">
                     </a></div>
             </div>
-            <img style="max-width: 100%;height: auto; width: auto;" src="img/acelyt (1).png" alt="">
+            <img style="max-width: 100%;height: auto; width: auto; margin-top: 50px;" src="img/acelyt (1).png" alt="">
         </div>
         </div>
 
@@ -63,8 +63,8 @@
 
 
     <main class="services container">
-        <div   data-aos="flip-left" data-aos-duration="1500" class="service">
-            <img src="img/bandera.png" alt="">
+        <div    class="service">
+            <img src="img/iconos/Iconos-Indeltec_14.png" alt="">
             <h3>Propiedades</h3>
             <p >Excelente estabilidad dimensional. <br>
                 <br>
@@ -86,8 +86,8 @@
             </p>
         </div>
 
-        <div data-aos="flip-right" data-aos-duration="1500" class="service">
-            <img src="img/bandera.png" alt="">
+        <div  class="service">
+            <img src="img/iconos/Iconos-Indeltec_13 copia.png" alt="">
             <h3>Aplicaciones:</h3>
             <p> 
 
@@ -109,8 +109,11 @@
 
     <section  id="productos" class="porfolios container">
         <h2>Articulos</h2>
-        <div data-aos="zoom-in-up" data-aos-duration="1500" class="porfolio">
-            <img src="img/barra.png" alt="">
+        <div data-aos="fade-zoom-in"
+        data-aos-easing="ease-in-back"
+        data-aos-delay="300"
+        data-aos-offset="0" class="porfolio">
+            <img style="width: 250px; height: 280px;" src="img/barra.png" alt="">
             <div class="porfolio-1">
                 <h3> BARRAS REDONDAS</h3>
                 <P>Largo estándar
@@ -121,7 +124,10 @@
 
         </div>
 
-        <div  data-aos="zoom-in-up" data-aos-duration="1500" class="porfolio">
+        <div data-aos="fade-zoom-in"
+        data-aos-easing="ease-in-back"
+        data-aos-delay="300"
+        data-aos-offset="0" class="porfolio">
 
             <div class="porfolio-2">
                 <h3> PLANCHAS</h3>
@@ -130,12 +136,12 @@
                     Espesores desde 8 mm hasta 50 mm</P>
                 <a href="#" class="btn-2">Informacion</a>
             </div>
-            <img src="img/planchan.png" alt="">
+            <img  style="width: 250px; height: 280px;" src="img/planchan.png" alt="">
 
         </div>
 
-        <div data-aos="zoom-in-up" data-aos-duration="1500" class="porfolio">
-            <img src="img/tubon.png" alt="">
+        <div data-aos="zoom-out-up"class="porfolio">
+            <img  style="width: 250px; height: 280px;" src="img/tubon.png" alt="">
             <div class="porfolio-1">
                 <h3> TUBOS</h3>
                 <P>Pedido especiales</P>
@@ -149,9 +155,7 @@
     <section id="contacto" class="contact">
 
 
-        <div data-aos="flip-left"
-        data-aos-easing="ease-out-cubic"
-        data-aos-duration="2000" class="form-container">
+        <div  class="form-container">
 
             <form action="correos.php" method="POST">
                 <h5  style="color:#ffffff; margin-bottom: 25px;">Agendar una cita</h5>
@@ -199,20 +203,20 @@
             <div class="info">
                 <div class="info-content">
                     <div class="info-price">
-                        <h2>Lorem</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                            Quaerat nostrum maiores cupiditate nisi quia rerum ducimus!
-                            Fugiat quasi, aliquam delectus illo consequatur, corrupti,
-                            quidem dolore porro fuga voluptas deserunt aperiam!</p>
+                        <h2 style="padding-bottom: 20px;">Resina acetal – Acelyt</h2>
+                        <p>Es la primera resina acetálica del mundo. Es un plástico de 
+                            ingeniería muy versátil, con propiedades similares a las de 
+                            los metales. Con esta nueva generación de acetales versátiles, 
+                            usted puede mecanizar fácilmente en formas complejas con ciclos 
+                            cortos y rápidas técnicas de montaje; se disminuyen los costos de 
+                            producción; se logra flexibilidad y libertad para diseñar
+                             todo tipo de productos.</p>
                     </div>
 
                     <div class="info-txt">
-                        <h2> Lorem </h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                            Quaerat nostrum maiores cupiditate nisi quia rerum ducimus!
-                            Fugiat quasi, aliquam delectus illo consequatur, corrupti,
-                            quidem dolore porro fuga voluptas deserunt aperiam!</p>
-                        <a href="#" class="btn-1">Información</a>
+                        
+                        <p>Esto se traduce en una reducción significativa de los costos de fabricación, brindándole una flexibilidad y libertad de diseño sin igual para la creación de diversos productos.</p>
+                        
                     </div>
 
 
@@ -225,7 +229,7 @@
                             style=" margin-top: -20px; width: 200px; height: 78px;">
                     </a>
                     <div  style="margin-right: 100px;" class="enlace">
-                        <li> <a href="https://www.facebook.com/suprads" class="social-icon-link bi-facebook"></a></li>
+                        
                         
                         </li>
                     </div>
@@ -252,6 +256,19 @@
             menuCheckbox.checked = false;
         });
     </script>
+<script>
+    AOS.init();
+  
+    // Agrega una clase a los elementos cuando la página se carga completamente
+    window.addEventListener('load', () => {
+      const elements = document.querySelectorAll('.aos-init');
+      elements.forEach(element => {
+        element.classList.add('aos-animate');
+      });
+    });
+  </script>
+
+
     
 </body>
 

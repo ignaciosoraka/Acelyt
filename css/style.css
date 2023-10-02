@@ -31,8 +31,7 @@ body::before {
 }
 
 header {
-    background:
-        url(../img/acelyt.png);
+    background:#D32728;
     background-position: center bottom;
     background-repeat: no-repeat;
     background-size: cover;
@@ -41,11 +40,24 @@ header {
     align-items: center;
 
     box-shadow: rgba(0, 0, 0, .9);
+    
 }
+
+.aos-init {
+    opacity: 0;
+    transform: translateY(-40px);
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+  }
+  
+  .aos-animate {
+    opacity: 1;
+    transform: translateY(0);
+  }
 
 .container {
     max-width: 1200px;
     margin: 0 auto;
+    
 }
 
 /*---------------------------------------
@@ -76,6 +88,7 @@ header {
     align-items: center;
     justify-content: space-between;
     z-index: 1000;
+
 }
 
 .image-container {
@@ -205,6 +218,7 @@ SERVICIOS
     /* Centra los divs horizontalmente */
     gap: 30px;
     /* Agrega una separación de 20px entre los divs */
+    padding-top: 100px;
 }
 
 .service {
@@ -215,10 +229,8 @@ SERVICIOS
     padding-right: 30px;
     padding-bottom: 35px;
     /* Agrega espacio interno para que el contenido no esté pegado al borde */
-    background: linear-gradient(180deg,
-            rgba(20, 19, 23, 0.5) 0%,
-            rgba(25, 22, 25, 1) 100%),
-        url(../img/mallado2.png);
+    background: 
+        url(../img/fondonegro.png);
     border: 1px solid #ccc;
     /* Opcional: Agrega un borde alrededor de cada div */
     margin: 0;
@@ -238,7 +250,7 @@ SERVICIOS
 
 .services img {
     margin-top: -50px;
-    height: 80px;
+    height: 100px;
     width: 100px;
 }
 
@@ -469,9 +481,8 @@ textarea {
 
 
 footer {
-    padding: 200px 0px 30px 0px;
-    background:
-        url(../img/acelytt.png);
+    padding: 50px 0px 30px 0px;
+    background:#D32728;
     background-position: top center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -495,6 +506,8 @@ footer {
 .info-txt {
     margin-left: 35px;
     color: #ffffff;
+    display: flex;
+    align-items: center;
 
 }
 
@@ -531,11 +544,61 @@ hr {
 }
 
 
+/*----------------------------------------
+Mecanizado
+----------------------------------------*/
+.menciones{
+    padding: 0px 50px;
+}
+.container2 {
+    display: grid; /* Utilizamos CSS Grid para crear dos columnas */
+    grid-template-columns: 1fr 1fr; /* Dos columnas de igual ancho */
+    gap: 20px; /* Espacio entre las columnas */
+}
+
+.column {
+    padding: 20px;
+     /* Agrega un borde para separar las columnas */
+    box-sizing: border-box; /* Incluye el borde en el ancho y alto */
+}
+
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columnas */
+    gap: 10px; /* Espacio entre las imágenes */
+    padding-top: 20px;
+}
+
+.grid-item {
+    position: relative; 
+    padding: 5px;
+     /* Borde alrededor de las imágenes */
+    box-sizing: border-box;
+}
+
+/* Estilos adicionales según tu preferencia para las imágenes */
+.grid-item img {
+    max-width: 100%; /* Ajusta el tamaño de las imágenes al ancho de su contenedor */
+    height: auto; /* Mantiene la proporción de aspecto de las imágenes */
+    transition: opacity 0.3s ease; /* Agrega una transición de opacidad de 0.3 segundos */
+}
+
+.grid-item:hover img {
+    opacity: 0.8; /* Cambia la opacidad al pasar el mouse sobre la imagen */
+}
+
+@media screen and (max-width: 768px) {
+    .grid-container {
+        grid-template-columns: 1fr; /* Cambia a una sola columna en pantallas pequeñas */
+    }
+     }
 
 @media (max-width: 991px) {
     
     .menu {
         padding: 20px;
+       
     }
 
     .menu label {
@@ -550,7 +613,7 @@ hr {
         background-color: #1c1c1c;
         display: none;
         text-align: center;
-        ;
+       
 
     }
 
@@ -664,6 +727,7 @@ hr {
     flex-direction: column;
     text-align: center;
     justify-content: center;
+    
 
 
     }
